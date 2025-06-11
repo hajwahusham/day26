@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>JavaScript Class</h2>
+    <p>how to use a JavaScript Class</p>
+    <p id="student1"></p>
+    <p id="student2"></p>
+    <script>
+      // creating a class
+      class student {
+        constructor(name, year) {
+          this.name = name;
+          this.year = year;
+        }
+        // creating age method for class student
+        age() {
+          let date = new Date();
+          return date.getFullYear() - this.year;
+        }
+      }
+      // use student class with two objects
+      studentObj1 = new student("June", 2014);
+      // new - create a new instance
+      document.getElementById("student1").innerHTML =
+        "my name is " +
+        studentObj1.name +
+        ". i was born in " +
+        studentObj1.year +
+        ", and my age is " +
+        studentObj1.age();
+
+      studentObj2 = new student("Tina", 2018);
+      document.getElementById("student2").innerHTML =
+        "my name is " +
+        studentObj2.name +
+        ". i was born in " +
+        studentObj2.year +
+        ", and my age is " +
+        studentObj2.age();
+    </script>
+  </body>
+</html>
